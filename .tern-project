@@ -1,0 +1,22 @@
+{
+  "libs": [
+    "browser",
+    "react"
+  ],
+  "loadEagerly": [
+    "src/App.js",
+    "src/index.js"
+  ],
+  "dontLoad": [
+      "node_modules/*",
+      "public/*"
+  ],
+  "plugins": {
+    "doc_comment": true,
+    "requirejs": {
+        "baseURL": "",
+        "paths": "",
+        "override": ""
+    }
+  }
+}
