@@ -82,6 +82,17 @@ class DropDown extends React.Component {
                 return
             }
         }
+        if (e) {
+            // find in loop, if more efficient methods fail (Edge, IE, etc)
+            let currentNode = e.target
+            while (currentNode !== document) {
+                if (currentNode === this.node) {
+                    return
+                } else {
+                    currentNode = currentNode.parentNode
+                }
+            }
+        }
         this.setState({open: false})
     }
 
