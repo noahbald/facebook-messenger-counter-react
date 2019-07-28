@@ -150,7 +150,7 @@ class GraphZone extends React.Component {
             <React.Fragment>
                 <Rectangle>
                     <DropDown outline={this.props.outline} text={this.props.text} options={this.props.options} onClick={(option) => this.props.onClick(option)}>{this.props.children}</DropDown>
-                    <svg>
+                    <svg ref={this.svg}>
                         {this.state.loaded ? plot.map((x, i) => (
                             <React.Fragment key={i}>
                                 <rect fill="#e17381" height={100*x/max+"%"} width={!isChrome() ? (100/plot.length) - 1 + "%" : null} style={{width: "calc(" + 100/plot.length + "% - 8px)", transform: "translateX(" + (i*100/plot.length) + "%) translateY(" + (100-100*x/max) + "%)"}}></rect>

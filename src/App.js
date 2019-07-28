@@ -3,7 +3,7 @@ import {Link} from 'react-router-dom'
 import {CSSTransition} from 'react-transition-group';
 import _ from 'lodash';
 import './App.css';
-import {Zone, Button, DropDown, DropDownLabel, Rectangle, Next, isChrome} from './Tools'
+import {Zone, Button, DropDown, DropDownLabel, Rectangle, Next} from './Tools'
 import {Stats} from './Stats.js'
 import {MEDIA} from './Constants.js'
 import {GraphZone} from './Graph.js'
@@ -807,16 +807,14 @@ class DropZone extends React.Component {
         }
     }
 
-    renderWarning() {
-        if (!isChrome()) {
-            return (<div>
-                <p>
-                    <strong>Warning:
-                    </strong>
-                    Elements may not dislay correctly outside Chrome.
-                </p>
-            </div>);
-        }
+    renderWarning(message) {
+        return (<div>
+            <p>
+                <strong>{"Warning: "}
+                </strong>
+                {message}
+            </p>
+        </div>);
     }
 
     renderError() {
@@ -850,6 +848,7 @@ class DropZone extends React.Component {
                 <form id="upload">
                     {this.props.loading ? (<p>&nbsp;</p>) : null}
                     {this.renderError()}
+                    {(document.body.clientWidth < 620) ? this.renderWarning("Site is not optimised for mobile. Please request desktop site.") : null}
                     <p>
                         <strong>Drop File Here</strong>
                     </p>
