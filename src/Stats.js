@@ -1,5 +1,5 @@
 import _ from 'lodash'
-import {REACTS, MEDIA} from './Constants.js'
+import {REACTS} from './Constants.js'
 
 var Stats = {
     uniqueWords: function(messages) {
