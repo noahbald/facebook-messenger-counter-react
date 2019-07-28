@@ -1,9 +1,5 @@
-/* // TODO:
-      - Remove useless constructors
-      - Remove unused imports
-*/
-
 import React from 'react';
+import {Link} from 'react-router-dom'
 import {CSSTransition} from 'react-transition-group';
 import _ from 'lodash';
 import './App.css';
@@ -761,13 +757,13 @@ class App extends React.Component {
     renderFooter() {
         return (<footer>
                 <ul>
-                    <li><p>Privacy</p></li>
+                    <li><Link to="/privacy">Privacy</Link></li>
                     {this.state.loaded ? (
                         <li style={{width: 100+"%", display: "flex", justifyContent: "center", transform: "rotate(180deg)"}}>
                             <Next href="#root"></Next>
                         </li>
                     ) : null}
-                    <li><p>About</p></li>
+                    <li><a href="https://www.noahwbaldwin.me/page?id=Facebook-Messenger-Counter">About</a></li>
                 </ul>
             </footer>)
     }
@@ -794,6 +790,7 @@ class App extends React.Component {
             }
             {this.renderBarGraph()}
             {this.renderFooter()}
+            <main>{this.props.children}</main>
         </React.Fragment>);
     }
 }
