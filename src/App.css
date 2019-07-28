@@ -79,8 +79,15 @@ p, a, body {
 }
 a {
     text-decoration: none;
-    color: #fefefe;
+    color: rgba(225, 115, 129, 1);
     cursor: pointer;
+    transition: color 0.2s
+}
+a:hover {
+    color: rgba(227, 125, 119, 1)
+}
+a:active {
+    color: rgba(232, 145, 99, 1)
 }
 
 .fade-exit {
@@ -390,6 +397,10 @@ circle, rect {
 
 #statistics {
     height: calc(100vh - 64px - 64px - 32px);
+}
+
+#privacy .zone {
+    margin-bottom: 64px;
 }
 
 /** ~ Scrollbar ~ **/
