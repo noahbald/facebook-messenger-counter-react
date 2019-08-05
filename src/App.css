@@ -403,6 +403,26 @@ circle, rect {
     margin-bottom: 64px;
 }
 
+#instructions {
+    height: calc(100vh - 128px);
+}
+#instructions .zone {
+    display: inline-grid;
+}
+#instructions iframe {
+    margin: 64px;
+    height: calc(100% - 128px);
+    width: calc(100% - 128px);
+}
+#instructions a {
+    z-index: 1;
+    position: absolute;
+    top: calc(50% - 32px);
+}
+#instructions footer {
+    bottom: 0;
+}
+
 /** ~ Scrollbar ~ **/
 ::-webkit-scrollbar {
   width: 8px;
