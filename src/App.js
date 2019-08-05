@@ -1,9 +1,8 @@
 import React from 'react';
-import {Link} from 'react-router-dom'
 import {CSSTransition} from 'react-transition-group';
 import _ from 'lodash';
 import './App.css';
-import {Zone, Button, DropDown, DropDownLabel, Rectangle, Next} from './Tools'
+import {Zone, Button, DropDown, DropDownLabel, Rectangle, Next, renderFooter} from './Tools'
 import {Stats} from './Stats.js'
 import {MEDIA} from './Constants.js'
 import {GraphZone} from './Graph.js'
@@ -486,7 +485,7 @@ class App extends React.Component {
                                                 minWidth: "36px",
                                                 padding: 0
                                             }}>
-                                            <p>{"-"}</p>
+                                            <p><strong>{"-"}</strong></p>
                                         </Button>
                                     </DropDownLabel>
                                 </CSSTransition>
@@ -510,7 +509,7 @@ class App extends React.Component {
                                                 minWidth: "36px",
                                                 padding: 0
                                             }}>
-                                            <p>{"+"}</p>
+                                            <p><strong>{"+"}</strong></p>
                                         </Button>
                                     </DropDownLabel>
                                 </CSSTransition>
@@ -754,20 +753,6 @@ class App extends React.Component {
         )
     }
 
-    renderFooter() {
-        return (<footer>
-                <ul>
-                    <li><Link to="/privacy">Privacy</Link></li>
-                    {this.state.loaded ? (
-                        <li style={{width: 100+"%", display: "flex", justifyContent: "center", transform: "rotate(180deg)"}}>
-                            <Next href="#root"></Next>
-                        </li>
-                    ) : null}
-                    <li><a href="https://www.noahwbaldwin.me/page?id=Facebook-Messenger-Counter">About</a></li>
-                </ul>
-            </footer>)
-    }
-
     render() {
         return (<React.Fragment>
             {this.renderFileSelect()}
@@ -789,7 +774,7 @@ class App extends React.Component {
                 </CSSTransition>
             }
             {this.renderBarGraph()}
-            {this.renderFooter()}
+            {renderFooter()}
             <main>{this.props.children}</main>
         </React.Fragment>);
     }

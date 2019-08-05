@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router-dom'
 import _ from 'lodash';
 import './main.css'
 
@@ -159,7 +160,7 @@ function DropDownLabel(props) {
 
 function Next(props) {
     return (
-        <a href={props.href}>
+        <a href={props.href} style={props.style} onClick={props.onClick}>
             <NextSVG props={props} className="next" width="64" height="64"></NextSVG>
         </a>
     )
@@ -206,4 +207,15 @@ function create_axis(min, max, maxTicks = 6) {
     return _.range(min, max, tickSpacing).reverse()
 }
 
-export {Zone, Button, DropDown, DropDownLabel, Rectangle, Next, isChrome, create_axis};
+function renderFooter() {
+    return (<footer>
+            <ul>
+                <li><Link to="/privacy">Privacy</Link></li>
+                <li><Link to="/instructions">Instructions</Link></li>
+                <li><a href="https://www.noahwbaldwin.me/page?id=Facebook-Messenger-Counter">About</a></li>
+                <li><Link to="/">Home</Link></li>
+            </ul>
+        </footer>)
+}
+
+export {Zone, Button, DropDown, DropDownLabel, Rectangle, Next, isChrome, create_axis, renderFooter};
