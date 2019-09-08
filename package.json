@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "ajv": "^6.10.2",
     "jquery": "^3.4.1",
     "lodash": "^4.17.15",
     "react": "^16.8.6",

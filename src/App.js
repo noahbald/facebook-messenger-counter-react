@@ -222,6 +222,27 @@ class App extends React.Component {
         // parse JSON file to obj
         var data = JSON.parse(fr.result);
         console.log("JSON parse successful");
+        // validate JSON
+        let Ajv = require('ajv')
+        let ajv = new Ajv()
+        let validate = ajv.compile({
+          "properties": {
+            "participants": { "type": "array", "minItems": 1 },
+            "messages": { "type": "array" },
+            "title": { "type": "string" },
+            "is_still_participant": { "type": "boolean" },
+            "thread_type": { "type": "string" },
+            "thread_path": { "type": "string" }
+          },
+          "required": [ "messages", "participants" ]
+        })
+        let valid = validate(data)
+        if (!valid) {
+            this.setState({error: "JSON failed verification", loading: 0})
+            console.log("Invalid JSON: " + ajv.errorsText(validate.errors))
+            return
+        }
+
         this.setState({data: data})
         this.setState({message_cat: this.messageDistribution(data)});
         let cat = [
