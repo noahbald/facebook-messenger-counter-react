@@ -212,7 +212,7 @@ function renderFooter() {
             <ul>
                 <li><Link to="/privacy">Privacy</Link></li>
                 <li><Link to="/instructions">Instructions</Link></li>
-                <li><a href="https://www.noahwbaldwin.me/page?id=Facebook-Messenger-Counter">About</a></li>
+                <li><a href="https://www.noahwbaldwin.me/projects/facebook-messenger-counter">About</a></li>
                 <li><Link to="/">Home</Link></li>
             </ul>
         </footer>)
