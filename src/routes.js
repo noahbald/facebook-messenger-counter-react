@@ -11,6 +11,7 @@ export default function() {
             <Route path="/" exact component={App} />
             <Route path="/privacy" exact component={Privacy} />
             <Route path="/instructions" exact component={Instructions} />
+            <Route path="/example" exact render={() => (<App example />)} />
         </BrowserRouter>
     )
 }

@@ -101,6 +101,11 @@ class App extends React.Component {
             }
         }
         this.state = this.initialState;
+        if (this.props.example) {
+          import('./example_messages.json').then(data => {
+            this.handleData(data)
+          })
+        }
     }
 
     /** ~~ Change State ~~ **/
@@ -220,7 +225,7 @@ class App extends React.Component {
 
     handleData(fr) {
         // parse JSON file to obj
-        var data = JSON.parse(fr.result);
+        var data = fr.default || JSON.parse(fr.result);
         console.log("JSON parse successful");
         // validate JSON
         let Ajv = require('ajv')
