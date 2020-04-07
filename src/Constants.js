@@ -6,7 +6,8 @@ var REACTS = {
     "\u00f0\u009f\u0098\u00a2": "sad",
     "\u00f0\u009f\u0098\u00a0": "angry",
     "\u00f0\u009f\u0091\u008d": "like",
-    "\u00f0\u009f\u0091\u008e": "dislike"
+    "\u00f0\u009f\u0091\u008e": "dislike",
+    "â¤": "heart"
 };
 
 export {MEDIA, REACTS}

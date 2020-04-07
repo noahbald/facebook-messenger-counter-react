@@ -50,7 +50,8 @@ var Stats = {
             sad: [],
             angry: [],
             like: [],
-            dislike: []
+            dislike: [],
+            heart: [],
         }
         for (let i in reactions) {
             let message = reactions[i]

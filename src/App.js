@@ -651,6 +651,7 @@ class App extends React.Component {
                                 <p style={ {height: 16.667 }} >&emsp;{'😠'}</p>
                                 <p style={ {height: 16.667 }} >&emsp;{'👍'}</p>
                                 <p style={ {height: 16.667 }} >&emsp;{'👎'}</p>
+                                <p style={ {height: 16.667 }} >&emsp;{'❤'}</p>
                             </div>
                             <div className="right inner">
                                 <h1>&nbsp;</h1>
