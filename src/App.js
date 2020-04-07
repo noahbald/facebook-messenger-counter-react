@@ -644,13 +644,13 @@ class App extends React.Component {
                                 <p>Total Call Duration:</p>
                                 <p>Shares:</p>
                                 <p>Reacts:</p>
-                                <p>&emsp;&lt;3</p>
-                                <p>&emsp;:D</p>
-                                <p>&emsp;:O</p>
-                                <p>&emsp;:&#39;(</p>
-                                <p>&emsp;>:(</p>
-                                <p>&emsp;good</p>
-                                <p>&emsp;bad</p>
+                                <p style={ {height: 16.667 }} >&emsp;{'😍'}</p>
+                                <p style={ {height: 16.667 }} >&emsp;{'😄'}</p>
+                                <p style={ {height: 16.667 }} >&emsp;{'😮'}</p>
+                                <p style={ {height: 16.667 }} >&emsp;{'😢'}</p>
+                                <p style={ {height: 16.667 }} >&emsp;{'😠'}</p>
+                                <p style={ {height: 16.667 }} >&emsp;{'👍'}</p>
+                                <p style={ {height: 16.667 }} >&emsp;{'👎'}</p>
                             </div>
                             <div className="right inner">
                                 <h1>&nbsp;</h1>
